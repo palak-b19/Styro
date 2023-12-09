@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stickheroap.stickheroap.HomeController">
+    <children>
+        <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.85" pickOnBounds="true">
+            <image>
+                <Image url="@../../../../../AI_Generated_Image.jpg" />
+            </image>
+        </ImageView>
+        <Text fx:id="title_text" layoutX="175.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STICK HERO" AnchorPane.bottomAnchor="310.33984375" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="174.9609375" AnchorPane.topAnchor="33.91796875">
+            <font>
+                <Font name="Comic Sans MS" size="40.0" />
+            </font>
+        </Text>
+        <Group fx:id="play_button_group" layoutX="300.0" layoutY="164.0">
+            <children>
+                <Circle fx:id="play_circle" fill="#d01616" onMouseClicked="#onPlayButtonClick" opacity="0.85" radius="56.0" stroke="#f7f1f1" strokeType="INSIDE" />
+                <ButtonBar layoutX="-144.0" layoutY="-33.0" prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                        <Button mnemonicParsing="false" onAction="#onPlayButtonClick" style="-fx-background-color: transparent;" text="PLAY" textFill="#f2f0f0">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Button>
+                    </buttons>
+                </ButtonBar>
+            </children>
+        </Group>
+        <ImageView fitHeight="48.0" fitWidth="61.0" layoutX="136.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../hero_final.png" />
+            </image>
+        </ImageView>
+        <Rectangle id="start_platform" fx:id="start_platform" arcHeight="5.0" arcWidth="5.0" height="150.0" layoutX="73.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="125.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="73.0" />
+        <Group fx:id="end_platform_group" layoutX="401.0" layoutY="249.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="87.0">
+            <children>
+                <Rectangle id="start_platform" fx:id="end_platform" arcHeight="5.0" arcWidth="5.0" height="150.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="112.0" />
+                <Rectangle fx:id="bonus_end_platform" arcHeight="5.0" arcWidth="5.0" fill="#e81212" height="9.0" layoutX="52.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="8.0" />
+            </children>
+        </Group>
+      <MediaView id="videoBackground" fitHeight="200.0" fitWidth="200.0" layoutX="7.0" layoutY="8.0" />
+    </children>
+</AnchorPane>
