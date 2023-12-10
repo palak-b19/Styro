@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#flipHero" onMousePressed="#extendStick2" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stickheroap.stickheroap.GameController">
+    <children>
+        <Group fx:id="revive_group" layoutX="10.0" layoutY="10.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="400.0" layoutX="-10.0" layoutY="-10.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+                <Group layoutX="264.0" layoutY="106.0">
+                    <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="41.0" layoutX="-14.0" layoutY="-1.0" stroke="BLACK" width="79.0" />
+                        <Text id="score_count" fx:id="score_count11" layoutX="-2.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+                            <font>
+                                <Font name="Apple SD Gothic Neo Regular" size="24.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../cherry_final.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Group>
+                <Text layoutX="229.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Revive?">
+                    <font>
+                        <Font name="Apple SD Gothic Neo ExtraBold" size="36.0" />
+                    </font>
+                </Text>
+                <Button layoutX="214.0" layoutY="197.0" mnemonicParsing="false" text="Use Berries">
+                    <font>
+                        <Font name="Apple SD Gothic Neo Regular" size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="214.0" layoutY="261.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" text="Quit">
+                    <font>
+                        <Font name="Apple SD Gothic Neo Regular" size="25.0" />
+                    </font>
+                </Button>
+            </children>
+        </Group>
+        <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../../../../../AI_Generated_Image.jpg" />
+            </image>
+        </ImageView>
+        <Rectangle id="start_platform" fx:id="start_platform" arcHeight="5.0" arcWidth="5.0" height="150.0" stroke="BLACK" strokeType="INSIDE" width="125.0" x="50.0" AnchorPane.bottomAnchor="0.0" />
+        <ImageView fx:id="hero_img" fitHeight="40.0" fitWidth="55.0" layoutX="14.0" pickOnBounds="true" x="117.0" y="211.0">
+            <image>
+                <Image url="@../../../../../hero_final.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="265.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score" AnchorPane.leftAnchor="265.0">
+            <font>
+                <Font name="Apple SD Gothic Neo Bold" size="28.0" />
+            </font>
+        </Text>
+        <Text id="score_count" fx:id="score_count" layoutX="290.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" AnchorPane.leftAnchor="290.0">
+            <font>
+                <Font name="Apple SD Gothic Neo Regular" size="36.0" />
+            </font>
+        </Text>
+        <Button fx:id="pause_button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#pauseGame" text="||">
+            <font>
+                <Font name="Apple SD Gothic Neo Bold" size="18.0" />
+            </font>
+        </Button>
+        <Rectangle id="start_platform" fx:id="end_platform" arcHeight="5.0" arcWidth="5.0" height="150.0" stroke="BLACK" strokeType="INSIDE" width="125.0" x="348.0" y="250.0" />
+        <Group layoutX="525.0" layoutY="23.0">
+            <children>
+                <Text id="score_count" fx:id="berry_count" layoutX="3.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
+                    <font>
+                        <Font name="Apple SD Gothic Neo Regular" size="24.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../../cherry_final.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Group>
+        <Rectangle fx:id="stick_rect" arcHeight="5.0" arcWidth="5.0" height="1.0" onMousePressed="#extendStick2" stroke="BLACK" strokeType="INSIDE" width="3.0" x="172.0" y="251.0" />
+      <ImageView fx:id="berry_encounter" fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" visible="false" x="247.0" y="258.0">
+         <image>
+            <Image url="@../../../../../cherry_final.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
